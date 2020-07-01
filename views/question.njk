@@ -1,0 +1,37 @@
+{% extends "layout.njk" %}
+
+{% block custom_styles %}
+    <!-- Mathjax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <!-- Custom style -->
+    <link rel="stylesheet" href="/css/question-page.css">
+{% endblock %}
+
+{% block content %}
+    <div class="container custom-question-container">
+        <div class="card">
+            <div class="card-header">QUESTÃO {{question_id}}</div>
+            
+            <div class="card-body">
+
+                {{content}}
+
+                <hr>
+
+                <form action="/result" method="POST">
+                    <div class="form-group">
+                        <label for="answer"><b>Resposta da questão</b></label>
+                        <input type="number" class="form-control" id="answer" placeholder="Digite o número" name="answer">
+                    </div>
+                    <input type="hidden" name="question_id" value="{{question_id}}">
+                    <input type="hidden" name="student_registration" value="{{student_registration}}">
+                    <button type="submit" class="btn btn-success">Enviar resposta</button>
+                </form>
+
+            </div>
+        </div>
+    <div>
+{% endblock %}

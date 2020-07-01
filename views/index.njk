@@ -1,0 +1,46 @@
+{% extends "layout.njk" %}
+
+{% block custom_styles%}
+    <link rel="stylesheet" href="/css/index-page.css">
+    <link rel="stylesheet" href="/css/index-page-responsive.css">
+{% endblock %}
+
+{% block content %}
+
+    <div class="container custom-index-container">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Resolver questão</h4>
+                <form action="/" method="POST">
+                    <div class="form-group">
+                        <label for="question_id">Número da questão</label>
+                        <input type="number" class="form-control" id="question_id" placeholder="Digite o número" name="question_id">
+                    </div>
+                    <div class="form-group">
+                        <label for="student_registration">Número da sua matrícula</label>
+                        <input type="number" class="form-control" id="student_registration" placeholder="Digite o número" name="student_registration">
+                    </div>
+                    <button type="submit" class="btn btn-light custom-btn">Ir para questão</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Consultar Score</h4>
+                <form>
+                    <div class="form-group">
+                        <label for="question_id">Código do curso</label>
+                        <input type="number" class="form-control" id="question_id" placeholder="Digite o número">
+                    </div>
+                    <div class="form-group">
+                        <label for="student_registration">Número da sua matrícula</label>
+                        <input type="number" class="form-control" id="student_registration" placeholder="Digite o número">
+                    </div>
+                    <button type="submit" class="btn btn-light custom-btn">Consultar</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

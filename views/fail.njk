@@ -1,0 +1,32 @@
+{% extends "layout.njk" %}
+
+{% block custom_styles%}
+    <link rel="stylesheet" href="/css/fail-page.css">
+{% endblock %}
+
+{% block content %}
+    <div class="container custom-fail-container">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-fail-text">
+                    <h4>Que pena, não foi dessa vez!!!</h4>
+                    <p>Continue tentando e se tiver dificuldades, procure o professor!</p>
+                    <div class="fail-lottie"></div>
+                    <a class="btn btn-light custom-btn" href="/">Continuar resolvendo</a>
+                </div>
+            <div>
+        </div>
+    </div>
+
+    <script src="/lottie.min.js"></script>
+    <script>
+        const element = document.querySelector('.fail-lottie')
+        lottie.loadAnimation({
+            container: element, 
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            path: '/13865-sign-for-error-flat-style.json'
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,27 @@
+.custom-success-container {
+    padding-top: 32px;
+}
+
+.custom-success-container .card {
+    max-width: 500px;
+    margin: auto;
+}
+
+.custom-success-container .card-success-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.custom-success-container .card-success-text p {
+    margin-bottom: 4px;
+}
+
+.custom-success-container .success-lottie {
+    height: 200px;
+}
+
+.custom-success-container .custom-btn {
+    /* border: 1px solid #aeaeae; */
+    box-shadow: 1px 2px 8px -4px #111;
+}

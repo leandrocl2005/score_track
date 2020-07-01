@@ -1,0 +1,33 @@
+{% extends "layout.njk" %}
+
+{% block custom_styles%}
+    <link rel="stylesheet" href="/css/success-page.css">
+{% endblock %}
+
+{% block content %}
+    <div class="container custom-success-container">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-success-text">
+                    <h4>Parabéns!!!</h4>
+                    <p>Você resolveu corretamente a questão!</p>
+                    <p>Continue praticando e chegará a perfeição</p>
+                    <div class="success-lottie"></div>
+                    <a class="btn btn-light custom-btn" href="/">Continuar resolvendo</a>
+                </div>
+            <div>
+        </div>
+    </div>
+
+    <script src="/lottie.min.js"></script>
+    <script>
+        const element = document.querySelector('.success-lottie')
+        lottie.loadAnimation({
+            container: element, 
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            path: '/433-checked-done.json'
+        });
+    </script>
+{% endblock %}

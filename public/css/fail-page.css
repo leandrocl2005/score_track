@@ -1,0 +1,27 @@
+.custom-fail-container {
+    padding-top: 32px;
+}
+
+.custom-fail-container .card {
+    max-width: 500px;
+    margin: auto;
+}
+
+.custom-fail-container .card-fail-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.custom-fail-container .card-fail-text p {
+    margin-bottom: 4px;
+}
+
+.custom-fail-container .fail-lottie {
+    height:150px;
+    padding: 8px 0;
+}
+
+.custom-fail-container .custom-btn {
+    box-shadow: 1px 2px 8px -4px #111;
+}
